@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                echo 'Checking out the code from git repo'
+                git 'https://github.com/vishwanath-tns/time-tracker.git'
+            }
+        }
+    }
+}
